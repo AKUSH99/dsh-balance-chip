@@ -5,6 +5,8 @@ Show your **DeepSeek API balance directly inside the DSH app**, in two places:
 1. **Bottom-right pill** – always visible, non-blocking (`pointer-events: none`), dot + amount, auto-refresh every 60 s
 2. **Sidebar footer** – beside Settings (dot in rail mode)
 
+![Screenshot: DeepSeek balance pill in the bottom-right corner of the DSH app](assets/screenshot.png)
+
 - 🟢 green ≥ $5 · 🟠 orange < $5 · 🔴 red on errors
 - Tooltip shows currency and last update time
 - **Your API key never ships with this plugin** – it is read at runtime from your local DSH credential store, and the only network call goes to the official `api.deepseek.com/user/balance` endpoint from the host side.
