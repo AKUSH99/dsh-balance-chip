@@ -1,0 +1,4 @@
+# dsh bundle patch: DeepSeek-Balance-Chip in der Seitenleiste.
+- insert:
+    - id: dsh-balance-chip
+      name: 'dsh-balance-chip'

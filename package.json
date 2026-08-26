@@ -1,0 +1,18 @@
+{
+  "name": "dsh-balance-chip",
+  "description": "DeepSeek API balance in the DSH sidebar footer – live status dot plus amount, 60s refresh, key stays local.",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "lib/index.js",
+  "license": "MIT",
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": { "platform": "web" }
+  },
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./client/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  }
+}
