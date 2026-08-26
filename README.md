@@ -23,6 +23,11 @@ Restart `dsh web` (or use the market's one-click restart). No build step, no dep
 
 Requires dsh web `0.1.0-rc.6` or newer (same base as the plugin market).
 
+## Installation alternatives
+
+- **Plugin Market:** once listed, open Settings → Plugin Market in the app, search "balance", one-click install.
+- **Prebuilt package:** the [latest release](https://github.com/AKUSH99/dsh-balance-chip/releases/latest) ships a ready tarball – the market offers it as the faster install path without any build step.
+
 ## How it works
 
 | Part | What it does |
@@ -41,6 +46,13 @@ No telemetry, no external dependencies, everything stays on your machine.
 ## 中文说明
 
 在 DSH 应用内实时显示 DeepSeek API 余额：右下角常驻胶囊（不阻挡点击）+ 侧边栏底部状态点，每 60 秒自动刷新。余额低于 5 美元显示橙色，出错显示红色，悬停可见币种与更新时间。**API Key 绝不内置**：运行时从本机 DSH 凭证库读取，仅向官方余额接口发起请求。使用前请确认凭证库中存在 `DEEPSEEK_API_KEY` 引用（与内置 DeepSeek 提供方相同，网页端模型页面会写入）。
+
+## FAQ
+
+**Why two displays?** The sidebar chip is subtle and always in reach; the bottom-right pill gives an at-a-glance status without blocking clicks (`pointer-events: none`).
+**How fresh is the value?** The host polls the official balance endpoint every 60 seconds; both displays refresh from that cached state.
+**Does polling cost tokens?** No – the balance endpoint is separate from the chat API and does not consume paid tokens.
+**Currency?** The official API reports the account currency; the displays show it as-is.
 
 ## License
 
