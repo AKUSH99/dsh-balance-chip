@@ -32,6 +32,12 @@ Requires dsh web `0.1.0-rc.6` or newer (same base as the plugin market).
 
 No telemetry, no external dependencies, everything stays on your machine.
 
+## Troubleshooting
+
+- **`Key?` in the chip/pill** – no `DEEPSEEK_API_KEY` reference in your credential store. Store your key via the web UI's Models page (or the `credentials` service), then reload.
+- **`…` while loading** – the first poll hasn't finished yet; wait a few seconds.
+- **Red dot / error** – the host couldn't reach `api.deepseek.com/user/balance`; check your network and key validity.
+
 ## 中文说明
 
 在 DSH 应用内实时显示 DeepSeek API 余额：右下角常驻胶囊（不阻挡点击）+ 侧边栏底部状态点，每 60 秒自动刷新。余额低于 5 美元显示橙色，出错显示红色，悬停可见币种与更新时间。**API Key 绝不内置**：运行时从本机 DSH 凭证库读取，仅向官方余额接口发起请求。使用前请确认凭证库中存在 `DEEPSEEK_API_KEY` 引用（与内置 DeepSeek 提供方相同，网页端模型页面会写入）。
