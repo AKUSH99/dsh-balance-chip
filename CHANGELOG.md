@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.2 – 2026-08-27
+
+- Docs: installation alternatives, FAQ
+
 ## 1.0.1 – 2026-08-26
 
 - Host: robust boot on fresh installs (declared `inject`, global interval, credential-object support)
@@ -9,3 +13,4 @@
 ## 1.0.0 – 2026-08-26
 
 - Initial release: sidebar footer balance chip, host balance route, 60 s auto-refresh
+

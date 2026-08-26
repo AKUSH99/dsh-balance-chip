@@ -1,7 +1,7 @@
 {
   "name": "dsh-balance-chip",
   "description": "DeepSeek API balance in the DSH sidebar footer – live status dot plus amount, 60s refresh, key stays local.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "type": "module",
   "main": "lib/index.js",
   "license": "MIT",
@@ -21,3 +21,4 @@
     "./package.json": "./package.json"
   }
 }
+
