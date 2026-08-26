@@ -104,6 +104,7 @@ window.__ModuleLoader__.load({ id: "dsh-balance-chip", factory: (require) => {
             "div",
             {
               title: title,
+              "aria-label": title,
               style: {
                 position: "fixed",
                 bottom: "14px",
